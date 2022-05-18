@@ -8,7 +8,7 @@ fi
 if [ ! -f "uuid" ]; then
   v2ctl uuid >uuid
   uuid=$(cat uuid)
-  v2ctl cert -domain=${DOMAIN} --file=${DOMAIN}
+  v2ctl cert -domain=${DOMAIN} --file=${DOMAIN} >/dev/null 2>&1 &
   sed -i 's/UUID/'${uuid}'/' v2-server.json
   sed -i 's/DOMAIN/'${DOMAIN}'/' v2-server.json
   sed -i 's/CACA/'${ca}'/' v2-server.json
