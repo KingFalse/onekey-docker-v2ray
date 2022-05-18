@@ -1,0 +1,33 @@
+{
+  "inbound": {
+    "port": 443,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "UUID",
+          "alterId": 0
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "security": "tls",
+      "wsSettings": {
+        "path": "/ray"
+      },
+      "tlsSettings": {
+        "certificates": [
+          {
+            "certificateFile": "/srv/DOMAIN_cert.pem",
+            "keyFile": "/srv/DOMAIN_key.pem"
+          }
+        ]
+      }
+    }
+  },
+  "outbound": {
+    "protocol": "freedom",
+    "settings": {}
+  }
+}

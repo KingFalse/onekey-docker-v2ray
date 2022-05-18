@@ -1,0 +1,15 @@
+{
+  "add": "your.domain.com",
+  "aid": "0",
+  "host": "your.domain.com",
+  "id": "UUID",
+  "net": "ws",
+  "path": "/ray",
+  "port": "443",
+  "ps": "your.domain.com",
+  "scy": "auto",
+  "sni": "your.domain.com",
+  "tls": "tls",
+  "type": "",
+  "v": "2"
+}
