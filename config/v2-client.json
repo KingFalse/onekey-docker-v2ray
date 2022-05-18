@@ -10,6 +10,6 @@
   "scy": "auto",
   "sni": "your.domain.com",
   "tls": "tls",
-  "type": "",
+  "type": "none",
   "v": "2"
 }
