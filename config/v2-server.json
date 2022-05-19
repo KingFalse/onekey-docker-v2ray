@@ -17,6 +17,7 @@
         "path": "/ray"
       },
       "tlsSettings": {
+        "allowInsecure": true,
         "certificates": [
           {
             "certificateFile": "/srv/DOMAIN_cert.pem",
