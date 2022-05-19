@@ -14,5 +14,9 @@
 docker stop v2ray
 docker rm v2ray
 ```
+
+### 屏幕预览
+![screenshot](screenshot/img.png)
+
 ### 其他
 有问题提Issues
