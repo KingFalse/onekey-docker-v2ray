@@ -2,7 +2,7 @@
 
 if [ "${DOMAIN}" = "your.domain.com" ]; then
   echo "未提供域名，开始获取本机IP地址..."
-  ipv4=${v2ctl fetch http://httpbin.org/ip | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"}
+  ipv4=`v2ctl fetch http://httpbin.org/ip | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
   echo "自动获取到当前机器IP地址："${ipv4}
   DOMAIN=${ipv4}
 fi
