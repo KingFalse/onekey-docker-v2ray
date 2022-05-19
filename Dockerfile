@@ -4,6 +4,7 @@ LABEL maintainer="KingFalse@yzsl@live.com"
 
 USER 0
 ENV DOMAIN=your.domain.com
+ENV PORT=443
 WORKDIR /srv
 
 ADD ./config/v2-server.json /srv/

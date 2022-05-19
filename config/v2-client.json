@@ -5,7 +5,7 @@
   "id": "UUID",
   "net": "ws",
   "path": "/ray",
-  "port": "443",
+  "port": "PORT",
   "ps": "your.domain.com",
   "scy": "auto",
   "sni": "your.domain.com",
