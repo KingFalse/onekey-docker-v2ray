@@ -8,11 +8,13 @@
 
 * 因为是自签证书,必须在客户端中将`跳过证书验证(allowInsecure)`选项设置为true
 
+* 指定其他端口：`curl -sSL https://raw.githubusercontent.com/KingFalse/onekey-docker-v2ray/main/install.sh | bash -s 6379`
+
 ### 查看链接
 
 ```
 docker exec v2ray cat /srv/url.txt
-```
+``
 
 ### 完全卸载
 
