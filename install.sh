@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+PORT=$1
+if [[ -z "$1" ]]; then
+  PORT=443
+fi
+
 command_exists() {
   command -v "$@" >/dev/null 2>&1
 }
@@ -10,12 +15,13 @@ install_v2ray() {
   if [ "$(docker ps -aq -f name=v2ray)" ]; then
     docker rm -f v2ray >/dev/null 2>&1
   fi
+  echo "您指定的端口是：${PORT}"
   echo "正在获取本机IP地址..."
   ipv4=$(curl -sSL http://httpbin.org/ip | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}")
   echo "获取到当前机器IP地址："${ipv4}
   DOMAIN=${ipv4}
   echo "正在启动docker容器..."
-  docker run --name v2ray -d --restart=always --pull=always -p 443:443 -e PORT=443 -e DOMAIN=${DOMAIN} kingfalse/onekey-docker-v2ray
+  docker run --name v2ray -d --restart=always --pull=always -p ${PORT}:${PORT} -e PORT=${PORT} -e DOMAIN=${DOMAIN} kingfalse/onekey-docker-v2ray
   echo ""
   echo ""
   docker exec v2ray cat /srv/url.txt
