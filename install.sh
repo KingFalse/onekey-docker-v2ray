@@ -47,7 +47,7 @@ do_install() {
     echo "本机已安装docker..."
   else
     echo "正在安装docker..."
-    curl -sSL https://get.docker.com/ | sh
+    curl -sSL https://get.docker.com/ | bash
   fi
 
   if command_exists docker && [ -e /var/run/docker.sock ]; then
