@@ -1,4 +1,4 @@
-FROM v2fly/v2fly-core
+FROM teddysun/xray
 
 LABEL maintainer="KingFalse@yzsl@live.com"
 

@@ -19,10 +19,6 @@
       "tlsSettings": {
         "allowInsecure": true,
         "certificates": [
-          {
-            "certificateFile": "/srv/DOMAIN_cert.pem",
-            "keyFile": "/srv/DOMAIN_key.pem"
-          }
         ]
       }
     }
