@@ -7,8 +7,7 @@ ENV DOMAIN=your.domain.com
 ENV PORT=443
 WORKDIR /srv
 
-ADD ./config/v2-server.json /srv/
-ADD ./config/v2-client.json /srv/
+ADD ./config/6in1-server.json /srv/
 ADD ./v2-server.sh /srv/
 
 RUN set -eux; \
