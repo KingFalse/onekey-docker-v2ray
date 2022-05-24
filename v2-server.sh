@@ -30,4 +30,4 @@ VMess链接：${url}
 
 "
 
-xray run -c /srv/v2-server.json
+xray run -c /srv/6in1-server.json
